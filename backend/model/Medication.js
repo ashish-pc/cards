@@ -12,7 +12,7 @@ const dosageInstructionsSchema = new mongoose.Schema({
 
 const frequencySchema = new mongoose.Schema({
     id: Number,
-    status: String
+    state: String
 });
 
 const medicationSchema = new mongoose.Schema({

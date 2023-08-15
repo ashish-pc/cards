@@ -7,6 +7,8 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { BrowserRouter } from 'react-router-dom';
 import "./index.css"
 import MedicineProvider from './context/MedicineProvider.jsx';
+import { Provider } from "react-redux"
+import store from './redux/store.jsx';
 
 const queryClient = new QueryClient();
 
@@ -20,7 +22,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <MantineProvider withGlobalStyles withNormalizeCSS>
       <MedicineProvider>
         <BrowserRouter>
-          <App />
+          <Provider store={store}>
+            <App />
+          </Provider>
         </BrowserRouter>
       </MedicineProvider>
     </MantineProvider>

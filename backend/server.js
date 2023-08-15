@@ -61,7 +61,6 @@ app.post("/medication/:document_id/:id", async (req, res) => {
     if (medData[medIndex].frequency) {
         // here we are grabbing the document's frequency based on index 
         // and updating the frequency based on req.body in body response 
-        console.log(medData[medIndex].frequency.map(d => d))
         _mongoDoc.medData[medIndex].frequency = medData[medIndex].frequency.map(d => d)
         await _mongoDoc.save();
         res.status(200).json({ message: "Updated successful" });
