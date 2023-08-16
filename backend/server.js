@@ -90,17 +90,26 @@ app.get("/medlogs/:document_id", async (req, res) => {
 app.put("/medlogs/:document_id", async (req, res) => {
     try {
         const { document_id: userId } = req.params;
-        const _mongoDoc = await Medication.findById(userId)
-        const { ObjectId, frequencyIndex } = req.body
-        console.log(ObjectId, frequencyIndex)
-        const medIndex = _mongoDoc.logs.findIndex((m) => m.med_id === ObjectId)
-        _mongoDoc.logs[medIndex].frequency.find(d => d.id === frequencyIndex).state = "active"
-        _mongoDoc.save()
-        res.status(200).send({ "Updated": "OK" })
+        const _mongoDoc = await Medication.findById(userId);
+        const { ObjectId, frequencyIndex } = req.body;
+        console.log(ObjectId, frequencyIndex);
+
+        const medIndex = _mongoDoc.logs.findIndex((m) => m.med_id === ObjectId);
+        const frequencyToUpdate = _mongoDoc.logs[medIndex].frequency.find(d => d.id === frequencyIndex);
+
+        if (frequencyToUpdate) {
+            frequencyToUpdate.state = frequencyToUpdate.state === "active" ? "inactive" : "active";
+            _mongoDoc.markModified('logs');
+            await _mongoDoc.save();
+            res.status(200).send({ "Updated": "OK" });
+        } else {
+            res.status(404).json({ "error": "Frequency not found" });
+        }
     } catch (error) {
-        res.status(500).json({ error });
+        res.status(500).json({ "error": error.message });
     }
-})
+});
+
 
 const start = async () => {
     mongoConnect()

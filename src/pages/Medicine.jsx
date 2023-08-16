@@ -29,14 +29,6 @@ const updateMedLogs = async (payload) => {
         console.log(err)
     })
 }
-const getMedLogs = async (payload) => {
-    await axios.put(`http://localhost:4000/medlogs/${USER_ID}`, payload).then(res => {
-        console.log(res)
-    }).catch(err => {
-        console.log(err)
-    })
-}
-
 
 
 const MedCard = ({ payload, refetch }) => {
@@ -88,7 +80,7 @@ const MedCard = ({ payload, refetch }) => {
         }
         fetchLogs()
         setLoading(false)
-    }, [postLogs])
+    }, [postLogs, updateMedLogs])
 
 
 
