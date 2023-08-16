@@ -1,0 +1,57 @@
+{
+    "medData": [
+        {
+            "id": "26e57a14cc9a8bbd",
+            "med": "estradioL 0.1 mg/24 hr patch",
+            "Provider": "Dr. Kiyoko Walker",
+            "dosageInstructions": {
+                "text": "Place 1 patch onto the skin every other day, Starting Thu 6/3/2021, Normal",
+                "patientInstruction": "Place 1 patch onto the skin every other day",
+                "start": "2023-06-03",
+                "end": "2023-07-03",
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+            }
+        },
+        {
+            "id": "b649a874672c5e79",
+            "med": "Acetaminophen 325 MG / Oxycodone",
+            "Provider": "Dr. Susan Hernandes",
+            "dosageInstructions": {
+                "text": "Every eight hours",
+                "start": "2023-06-03",
+                "end": "2023-07-03",
+                "frequency": 3,
+                "period": 1,
+                "periodUnit": "d"
+            }
+        },
+        {
+            "id": "ab0244a06e8ecb93",
+            "med": "Ibuprofen 400 MG Oral ",
+            "Provider": "Dr. Kiyoko Walker",
+            "dosageInstructions": {
+                "text": "Every four to six hours",
+                "start": "2023-06-03",
+                "end": "2023-06-18",
+                "frequency": 4,
+                "period": 1,
+                "periodUnit": "d"
+            }
+        },
+        {
+            "id": "ab0244a06e8ecb99",
+            "med": "Ibuprofen 400 MG Oral ABC",
+            "Provider": "Dr. Kiyoko Walker",
+            "dosageInstructions": {
+                "text": "Every four to six hours",
+                "start": "2023-06-03",
+                "end": "2023-06-18",
+                "frequency": 4,
+                "period": 1,
+                "periodUnit": "d"
+            }
+        }
+    ]
+}
