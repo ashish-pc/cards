@@ -52,6 +52,20 @@
                 "period": 1,
                 "periodUnit": "d"
             }
+        },
+        {
+            "id": "ab0244a06e8ec559",
+            "med": "Ibuprofen 400 MG Oral IFC",
+            "Provider": "Dr. Kiyoko Walker",
+            "dosageInstructions": {
+                "text": "Every four to six hours",
+                "start": "2023-06-03",
+                "end": "2023-06-18",
+                "frequency": 4,
+                "period": 1,
+                "periodUnit": "d"
+            }
         }
+        
     ]
 }

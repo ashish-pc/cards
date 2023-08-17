@@ -92,8 +92,6 @@ app.put("/medlogs/:document_id", async (req, res) => {
         const { document_id: userId } = req.params;
         const _mongoDoc = await Medication.findById(userId);
         const { ObjectId, frequencyIndex } = req.body;
-        console.log(ObjectId, frequencyIndex);
-
         const medIndex = _mongoDoc.logs.findIndex((m) => m.med_id === ObjectId);
         const frequencyToUpdate = _mongoDoc.logs[medIndex].frequency.find(d => d.id === frequencyIndex);
 
