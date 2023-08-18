@@ -65,6 +65,33 @@
                 "period": 1,
                 "periodUnit": "d"
             }
+        },
+        {
+            "id": "ab0244a06eddc559",
+            "med": "Ibuprofen 40a MG Oral IFC",
+            "Provider": "Dr. Kiyoko Walker",
+            "dosageInstructions": {
+                "text": "Every four to six hours",
+                "start": "2023-06-03",
+                "end": "2023-06-18",
+                "frequency": 4,
+                "period": 1,
+                "periodUnit": "d"
+            }
+        },
+        {
+            "id": "ddb0344a06eddc559",
+            "med": "Ibuprofen 40a MG Oral IFC",
+            "Provider": "Dr. Kiyoko Walker",
+            "dosageInstructions": {
+                "text": "Every four to six hours",
+                "start": "2023-06-03",
+                "end": "2023-06-18",
+                "frequency": 2,
+                "period": 1,
+                "periodUnit": "d"
+            }
+        
         }
         
     ]

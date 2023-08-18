@@ -17,7 +17,8 @@ const Medicine = () => {
     )
 }
 
-const updateMedLogs = async (payload) => {
+
+const updateMedLogsData = async (payload) => {
     await axios.put(`http://localhost:4000/medlogs/${USER_ID}`, payload).then(res => {
         console.log(res)
     }).catch(err => {
@@ -38,7 +39,6 @@ const reducer = (state, action) => {
         case 'post_success':
             return { ...state, upload: action.payload }
         case 'mixing':
-            console.log(action.payload)
             const { medData, logs } = action.payload;
             const mixData = medData.map((data, index) => {
                 data["frequency"] = logs[index].frequency;
@@ -147,7 +147,7 @@ const MedCard = ({ payload, refetch }) => {
                                                                             backgroundColor: d.state === "active" ? "red" : "gray"
                                                                         }}
                                                                         onClick={async () => {
-                                                                            await updateMedLogs(
+                                                                            await updateMedLogsData(
                                                                                 {
                                                                                     ObjectId: data.id,
                                                                                     frequencyIndex: d.id
